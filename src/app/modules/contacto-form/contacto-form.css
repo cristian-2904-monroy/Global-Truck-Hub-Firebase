@@ -1,0 +1,71 @@
+.form-contacto{
+    /* Fondo semi-transparente para el contenedor del formulario */
+    background-color: rgba(255,255,255,0.05);
+}
+
+.custom-input {
+    /* Fondo oscuro translúcido para los campos de entrada */
+    background-color: rgba(255, 255, 255, 0.1);
+
+    /* Borde sutil para separar visualmente el input */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    /* Texto en blanco para contraste */
+    color: white;
+
+    /* Bordes rectos, sin redondeo */
+    border-radius: 0;
+
+    /* Espaciado interno cómodo */
+    padding: 12px;
+}
+
+.custom-input::placeholder {
+    /* Color del texto de ayuda dentro del input */
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.custom-input:focus {
+    /* Fondo un poco más visible al seleccionar el campo */
+    background-color: rgba(255, 255, 255, 0.15);
+
+    /* Color del borde al hacer foco */
+    border-color: #b30000;
+
+    /* Elimina el brillo azul predeterminado */
+    box-shadow: none;
+}
+
+.btn-enviar-contacto {
+    /* Fondo negro para el botón */
+    background-color: #000000;
+
+    /* Texto blanco para buen contraste */
+    color: white;
+
+    /* Borde blanco visible */
+    border: 1px solid white;
+
+    /* Espaciado interno del botón */
+    padding: 15px;
+
+    /* Bordes completamente redondeados */
+    border-radius: 25px;
+
+    /* Espaciado entre letras para estilo moderno */
+    letter-spacing: 2px;
+
+    /* Transición suave al hacer hover */
+    transition: 0.3s;
+
+    /* Texto en mayúsculas */
+    text-transform: uppercase;
+}
+
+.btn-enviar-contacto:hover {
+    /* Color rojo cuando el mouse pasa sobre el botón */
+    background-color: #b30000;
+
+    /* El borde cambia al mismo rojo */
+    border-color: #b30000;
+}

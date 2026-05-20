@@ -1,0 +1,92 @@
+/* Personaliza el contenedor principal del footer */
+.footer-principal {
+
+    /* Aplica un degradado oscuro horizontal para darle un estilo más elegante al pie de página */
+    background: linear-gradient(to right, #000000, #0a0000);
+
+    /* Agrega una línea roja en la parte superior para separar visualmente el footer del contenido */
+    border-top: 3px solid #b30000;
+}
+
+/* Selecciona los elementos de lista donde aparecen los nombres de los diseñadores */
+.nombres-disenadores li {
+
+    /* Cambia el color del texto a un rojo intenso para destacarlo */
+    color: #e60000; 
+
+    /* Aumenta el tamaño de la letra para que los nombres sean más visibles */
+    font-size: 1.5rem;
+
+    /* Hace que el texto se vea más grueso y llamativo */
+    font-weight: bold;
+
+    /* Reduce el espacio vertical entre líneas para mantener el bloque más compacto */
+    line-height: 1.1;
+}
+
+/* Aplica estilos a los enlaces dentro de la lista de políticas */
+.politicas-lista li a {
+
+    /* Colorea los enlaces usando un tono rojo oscuro */
+    color: #b30000;
+
+    /* Elimina el subrayado automático de los links */
+    text-decoration: none;
+
+    /* Incrementa ligeramente el tamaño del texto para mejorar la lectura */
+    font-size: 1.2rem;
+
+    /* Hace que cada enlace ocupe toda la línea disponible */
+    display: block;
+
+    /* Agrega separación inferior entre cada opción del listado */
+    margin-bottom: 5px;
+}
+
+/* Modifica el estilo del enlace cuando el usuario pasa el mouse encima */
+.politicas-lista li a:hover {
+
+    /* Cambia el color del texto a blanco para resaltar la interacción */
+    color: white;
+}
+
+/* Diseña el contenedor circular de cada ícono de red social */
+.social-icon {
+
+    /* Define el ancho fijo del ícono */
+    width: 40px;
+
+    /* Mantiene la misma altura para formar un círculo perfecto */
+    height: 40px;
+
+    /* Coloca un fondo oscuro detrás del ícono */
+    background-color: #222;
+
+    /* Redondea completamente las esquinas para crear la forma circular */
+    border-radius: 50%;
+
+    /* Activa flexbox para centrar el contenido interno */
+    display: flex;
+
+    /* Centra verticalmente el ícono dentro del círculo */
+    align-items: center;
+
+    /* Centra horizontalmente el contenido */
+    justify-content: center;
+
+    /* Pinta el ícono de color blanco para mejorar el contraste */
+    color: white;
+
+    /* Ajusta el tamaño visual del ícono */
+    font-size: 1.2rem;
+
+    /* Cambia el cursor para indicar que el elemento es interactivo */
+    cursor: pointer;
+}
+
+/* Aplica un efecto visual al pasar el cursor sobre los íconos sociales */
+.social-icon:hover {
+
+    /* Sustituye el fondo oscuro por rojo para destacar la interacción */
+    background-color: #b30000;
+}

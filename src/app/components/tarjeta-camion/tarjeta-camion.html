@@ -1,0 +1,31 @@
+<div class="card h-100 card-roja shadow">
+
+  <!-- Imagen del camión -->
+  <img
+    [src]="camion().imagen"
+    class="card-img-top img-fluid custom-card-img"
+    [alt]="camion().nombre"
+  />
+
+  <div class="card-body text-center">
+
+    <!-- Nombre del camión -->
+    <h5 class="card-title fw-bold text-uppercase">
+      {{ camion().nombre }}
+    </h5>
+
+    <!-- Precio del camión -->
+    <p class="fw-bold price-tag">
+      {{ camion().precio | currency:'COP':'symbol':'1.0-0' }}
+    </p>
+
+    <!-- Botón que abre la cotización del camión seleccionado -->
+    <button
+      type="button"
+      (click)="irACotizacion()"
+      class="btn btn-outline-light w-100 rounded-pill">
+      Cotizar Camión
+    </button>
+
+  </div>
+</div>

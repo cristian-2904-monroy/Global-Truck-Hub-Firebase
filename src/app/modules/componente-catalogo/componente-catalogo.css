@@ -1,0 +1,38 @@
+/* Personaliza el diseño general de la tarjeta del camión */
+.card-camion {
+
+    /* Suaviza las animaciones relacionadas con movimiento y sombras */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Cambia el cursor para indicar que la tarjeta es interactiva */
+    cursor: pointer;
+
+    /* Aplica un fondo rojo oscuro como color principal de la tarjeta */
+    background-color: #b30000 !important;
+}
+
+/* Efectos visuales activados cuando el usuario pasa el mouse sobre la tarjeta */
+.card-camion:hover {
+
+    /* Eleva ligeramente la tarjeta para crear sensación de profundidad */
+    transform: translateY(-10px); 
+
+    /* Genera una sombra roja suave debajo de la tarjeta */
+    box-shadow: 0px 10px 20px rgba(179, 0, 0, 0.3); 
+
+    /* Mantiene el borde con el mismo tono rojo durante la interacción */
+    border-color: #b30000 !important; 
+}
+
+/* Controla la apariencia de la imagen mostrada dentro de la tarjeta */
+.img-fluida-card {
+
+    /* Define una altura fija para mantener uniformidad entre imágenes */
+    height: 200px;
+
+    /* Ajusta la imagen sin deformarla aunque deba recortarse */
+    object-fit: cover; 
+
+    /* Agrega una línea roja en la parte inferior de la imagen */
+    border-bottom: 2px solid #b30000;
+}

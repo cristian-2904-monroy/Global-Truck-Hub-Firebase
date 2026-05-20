@@ -1,0 +1,10 @@
+.navbar{
+    /* Aplica un fondo oscuro semitransparente para que la barra se vea moderna sin tapar completamente el contenido */
+    background: rgba(33, 37, 41, 0.75);
+
+    /* Genera un efecto de desenfoque detrás de la barra de navegación */
+    backdrop-filter: blur(10px);
+
+    /* Activa el mismo desenfoque en navegadores basados en WebKit como Safari */
+    -webkit-backdrop-filter: blur(10px);
+}

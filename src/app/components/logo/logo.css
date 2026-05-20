@@ -1,0 +1,52 @@
+/* Personaliza el tamaño de la imagen utilizada como logo */
+.logo-img {
+
+    /* Define una altura fija para mantener el logo proporcionado */
+    height: 50px;
+
+    /* Ajusta automáticamente el ancho para evitar deformaciones */
+    width: auto;
+}
+
+/* Aplica estilos al texto que acompaña el logo de la marca */
+.brand-text {
+
+    /* Incrementa el tamaño de la letra para darle más protagonismo */
+    font-size: 1.5rem;
+
+    /* Evita que el texto se divida en varias líneas */
+    white-space: nowrap; 
+
+    /* Suaviza las animaciones o cambios visuales del elemento */
+    transition: all 0.3s ease;
+}
+
+/* Configuración especial diseñada para pantallas pequeñas */
+@media (max-width: 576px) {
+
+    /* Ajusta el comportamiento del texto del logo en celulares */
+    .brand-text {
+
+        /* Reduce el tamaño del texto para que encaje mejor en móviles */
+        font-size: 1.1rem;   
+
+        /* Permite que el texto pueda bajar a otra línea si es necesario */
+        white-space: normal;  
+
+        /* Limita el ancho máximo ocupado por el texto */
+        max-width: 160px;     
+
+        /* Convierte el elemento en bloque para mejorar la distribución */
+        display: block;       
+
+        /* Aumenta ligeramente el espacio entre líneas para facilitar la lectura */
+        line-height: 1.2;     
+    }
+
+    /* Modifica el tamaño del logo cuando la pantalla es más pequeña */
+    .logo-img {
+
+        /* Reduce la altura para que el encabezado ocupe menos espacio */
+        height: 40px;       
+    }
+}

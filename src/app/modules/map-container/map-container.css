@@ -1,0 +1,15 @@
+.map-container{
+    /* Hace que el contenedor del mapa ocupe todo el ancho disponible */
+    width: 100%;
+
+    /* Define una altura fija para el mapa */
+    height: 400px;
+}
+
+.mapa-iframe{
+    /* Elimina el borde por defecto del iframe */
+    border: 0;
+
+    /* Aplica un filtro para darle estilo tipo oscuro (gris + inversión de colores) */
+    filter: grayscale(100%) invert(90%);
+}

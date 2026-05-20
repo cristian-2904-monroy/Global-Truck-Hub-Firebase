@@ -1,0 +1,136 @@
+.home-hero {
+    /* Altura completa de la pantalla */
+    height: 100vh;
+
+    /* Imagen de fondo con capa oscura encima para mejorar la lectura del texto */
+    background-image:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('/Global-Truck-Hub-Firebase/recursos/ImagenPrincipal.png');
+    /* Ajusta la imagen para cubrir todo el contenedor sin deformarse */
+    background-size: cover;
+
+    /* Centra la imagen de fondo */
+    background-position: center;
+
+    /* Permite posicionar elementos internos de forma absoluta */
+    position: relative;
+
+    /* Centra el contenido en el medio de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Alinea el texto al centro */
+    text-align: center;
+}
+
+.boton-posicion-mockup {
+    /* Posiciona el botón de forma flotante */
+    position: absolute;
+
+    /* Distancia desde abajo */
+    bottom: 60px;
+
+    /* Distancia desde la derecha */
+    right: 80px;
+}
+
+.btn-mockup-final {
+    /* Color de fondo del botón */
+    background-color: #4a4a4a;
+
+    /* Color del texto */
+    color: #ffffff;
+
+    /* Borde blanco visible */
+    border: 2px solid #ffffff;
+
+    /* Espaciado interno del botón */
+    padding: 12px 30px;
+
+    /* Tamaño del texto */
+    font-size: 1.1rem;
+
+    /* Grosor de la letra */
+    font-weight: 500;
+
+    /* Texto en mayúsculas */
+    text-transform: uppercase;
+
+    /* Separación entre letras */
+    letter-spacing: 1px;
+
+    /* Bordes redondeados */
+    border-radius: 25px;
+
+    /* Animación suave al cambiar estilos */
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+
+    /* Sombra para darle profundidad */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-mockup-final:hover {
+    /* Cambio de color al pasar el mouse */
+    background-color: #666666;
+
+    /* Pequeño zoom para efecto interactivo */
+    transform: scale(1.02);
+}
+
+/* RESPONSIVE: ajustes para pantallas medianas */
+@media (max-width: 992px) {
+
+    .home-hero {
+        /* Reduce la altura en pantallas medianas */
+        height: 70vh;
+    }
+
+    .boton-posicion-mockup {
+        /* Ajusta posición lateral del botón */
+        right: 40px;
+    }
+}
+
+/* RESPONSIVE: ajustes para móviles */
+@media (max-width: 576px) {
+
+    .home-hero {
+        /* Reduce aún más la altura en móviles */
+        height: 60vh;
+    }
+
+    .display-1 {
+        /* Reduce tamaño del título principal */
+        font-size: 2.5rem !important;
+    }
+
+    .boton-posicion-mockup {
+        /* Cambia a posición normal dentro del flujo */
+        position: relative;
+
+        /* Resetea posiciones absolutas */
+        bottom: auto;
+        right: auto;
+
+        /* Espacio superior */
+        margin-top: 20px;
+
+        /* Ocupa todo el ancho disponible */
+        display: block;
+        width: 100%;
+    }
+
+    .btn-mockup-final {
+        /* Botón más pequeño en móviles */
+        width: 80%;
+
+        /* Reduce padding */
+        padding: 10px 20px;
+
+        /* Texto más pequeño */
+        font-size: 0.9rem;
+    }
+}

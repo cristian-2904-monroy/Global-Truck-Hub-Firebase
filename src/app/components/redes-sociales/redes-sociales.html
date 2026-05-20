@@ -1,0 +1,20 @@
+
+<div class="d-flex justify-content-center gap-3 py-3">
+
+  
+  @for (red of redes; track red.nombre) {
+
+    
+    <a [href]="red.url" class="social-button">
+
+      
+      <i 
+        
+        
+        [class]="red.icono" 
+
+        
+        [style.color]="red.color"></i>
+    </a>
+  }
+</div>

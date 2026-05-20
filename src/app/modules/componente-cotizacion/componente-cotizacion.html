@@ -1,0 +1,157 @@
+<section class="cotizacion-section py-5">
+  <div class="container text-white">
+    <div class="row">
+      <div class="col-12 mb-4">
+        <h2 class="display-5 fw-bold text-uppercase">Cotización Detallada</h2>
+
+        <p class="text-secondary">
+          Revisa las especificaciones antes de proceder con tu solicitud.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <!-- Ficha técnica -->
+        <div
+          class="p-4 rounded-4 shadow mb-5"
+          style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h3 class="fw-bold text-danger mb-4">Especificaciones Técnicas</h3>
+
+          <table class="table table-dark table-striped align-middle">
+            <tbody>
+              <tr>
+                <td class="fw-bold">Nombre</td>
+                <td>{{ camionSeleccionado?.nombre }}</td>
+              </tr>
+
+              <tr>
+                <td class="fw-bold">Marca</td>
+                <td>{{ camionSeleccionado?.marca }}</td>
+              </tr>
+
+              <tr>
+                <td class="fw-bold">Motor</td>
+                <td>{{ camionSeleccionado?.motor }}</td>
+              </tr>
+
+              <tr>
+                <td class="fw-bold">Transmisión</td>
+                <td>{{ camionSeleccionado?.transmision }}</td>
+              </tr>
+
+              <tr>
+                <td class="fw-bold">Potencia</td>
+                <td>{{ camionSeleccionado?.potencia }}</td>
+              </tr>
+
+              <tr>
+                <td class="fw-bold">Torque</td>
+                <td>{{ camionSeleccionado?.torque }}</td>
+              </tr>
+
+              <tr>
+                <td class="fw-bold">Ejes</td>
+                <td>{{ camionSeleccionado?.ejes }}</td>
+              </tr>
+
+              <tr>
+                <td class="fw-bold">Combustible</td>
+                <td>{{ camionSeleccionado?.combustible }}</td>
+              </tr>
+
+              <tr>
+                <td class="fw-bold">Precio</td>
+                <td class="text-danger fw-bold">
+                  {{ camionSeleccionado?.precio | currency: 'COP' : 'symbol' : '1.0-0' }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Simulador -->
+        <div
+          class="mt-5 p-4 rounded-4 shadow"
+          style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1)"
+        >
+          <h3 class="fw-bold mb-4">Simulador de Pagos</h3>
+
+          <div class="row g-4">
+            <!-- Cuota Inicial -->
+            <div class="col-md-6">
+              <label class="form-label text-secondary text-uppercase small fw-bold">
+                Cuota Inicial (COP)
+              </label>
+
+              <input
+                type="number"
+                class="form-control form-control-lg bg-transparent text-white border-secondary"
+                [(ngModel)]="cuotaInicial"
+                (keyup)="ejecutarCalculos()"
+                placeholder="Ej: 50000000"
+              />
+            </div>
+
+            <!-- Meses -->
+            <div class="col-md-6">
+              <label class="form-label text-secondary text-uppercase small fw-bold">
+                Plazo del Crédito (Meses)
+              </label>
+
+              <input
+                type="number"
+                class="form-control form-control-lg bg-transparent text-white border-secondary"
+                [(ngModel)]="mesesPlazo"
+                (keyup)="ejecutarCalculos()"
+                placeholder="Ej: 12, 24, 60..."
+              />
+            </div>
+
+            <!-- Resultados -->
+            <div class="col-12 mt-5 p-3 rounded-3 bg-danger bg-opacity-10 border border-danger">
+              <div class="d-flex justify-content-between mb-2">
+                <span>IVA (19%):</span>
+
+                <span class="fw-bold">
+                  {{ iva | currency: 'COP' : 'symbol' : '1.0-0' }}
+                </span>
+              </div>
+
+              <div class="d-flex justify-content-between mb-2">
+                <span>Total con IVA:</span>
+
+                <span class="fw-bold text-danger">
+                  {{ totalConIva | currency: 'COP' : 'symbol' : '1.0-0' }}
+                </span>
+              </div>
+
+              <hr class="text-secondary" />
+
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="h5 mb-0"> Valor de la Cuota Mensual: </span>
+
+                <span class="h3 mb-0 fw-bold text-white">
+                  {{ valorCuota | currency: 'COP' : 'symbol' : '1.0-0' }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Botón de imprimir -->
+    <div class="row mt-5">
+      <div class="col-lg-8 mx-auto text-center">
+        <button
+          type="button"
+          (click)="imprimirCotizacion()"
+          class="btn btn-danger btn-lg rounded-pill shadow px-5"
+        >
+          <i class="bi bi-printer me-2"></i> Imprimir o Guardar como PDF
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

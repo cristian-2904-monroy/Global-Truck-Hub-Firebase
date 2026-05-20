@@ -1,0 +1,26 @@
+html,
+body {
+    /* Elimina el espacio por defecto del navegador */
+    margin: 0;
+
+    /* Quita el padding inicial del documento */
+    padding: 0;
+}
+
+:host {
+    /* Hace que el componente ocupe todo el ancho disponible */
+    display: block;
+
+    /* Asegura que el componente tenga al menos el alto de la pantalla */
+    min-height: 100vh;
+
+    /* Fondo con degradado vertical de oscuro a rojo vino */
+    background: linear-gradient(
+        180deg,
+        #1a1a1a 0%,
+        #3d0a0a 100%
+    );
+
+    /* Fija el fondo para que no se mueva al hacer scroll */
+    background-attachment: fixed;
+}

@@ -1,0 +1,115 @@
+/* Diseña la tarjeta principal con tonos oscuros y rojos */
+.card-roja {
+
+    /* Aplica un degradado vertical para darle un estilo más llamativo */
+    background: linear-gradient(180deg, #000000 0%, #920202 100%);
+
+    /* Cambia el color del texto a blanco para mejorar la legibilidad */
+    color: white;
+
+    /* Agrega un borde gris alrededor de la tarjeta */
+    border: 2px solid #64635f;
+
+    /* Redondea las esquinas para un diseño más moderno */
+    border-radius: 20px;
+
+    /* Muestra el cursor de interacción cuando el usuario pasa sobre la tarjeta */
+    cursor: pointer;
+
+    /* Activa flexbox para organizar el contenido interno verticalmente */
+    display: flex;
+
+    /* Coloca los elementos uno debajo del otro */
+    flex-direction: column;
+
+    /* Suaviza las animaciones relacionadas con movimiento y sombras */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto visual aplicado cuando el usuario pasa el mouse sobre la tarjeta */
+.card-roja:hover {
+
+    /* Eleva ligeramente la tarjeta para generar sensación de profundidad */
+    transform: translateY(-10px);
+
+    /* Agrega una sombra más intensa debajo de la tarjeta */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Personaliza la apariencia del precio mostrado en la tarjeta */
+.price-tag {
+
+    /* Incrementa el tamaño del texto del precio */
+    font-size: 1.2rem;
+
+    /* Mantiene el color blanco para conservar el contraste */
+    color: #ffffff;
+}
+
+/* Configura la distribución interna del cuerpo de la tarjeta */
+.card-body {
+
+    /* Hace que esta sección ocupe el espacio restante disponible */
+    flex-grow: 1;
+
+    /* Activa flexbox para organizar el contenido */
+    display: flex;
+
+    /* Ordena los elementos verticalmente */
+    flex-direction: column;
+
+    /* Distribuye el contenido dejando espacio entre los elementos */
+    justify-content: space-between;
+}
+
+/* Aplica una transición suave a los botones dentro de la tarjeta */
+.card-roja .btn {
+
+    /* Suaviza los cambios visuales cuando el usuario interactúa con el botón */
+    transition: all 0.3s ease;
+}
+
+/* Modifica el diseño del botón cuando se pasa el cursor encima */
+.card-roja .btn:hover {
+
+    /* Cambia el fondo del botón a negro */
+    background-color: #000000 !important;
+
+    /* Mantiene el texto en blanco para asegurar buena visibilidad */
+    color: #ffffff !important;
+
+    /* Igualar el color del borde con el nuevo fondo */
+    border-color: #000000 !important;
+
+    /* Añade una sombra para darle más profundidad al botón */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Configura estilos aplicados directamente al componente Angular */
+:host {
+
+    /* Hace que el componente ocupe todo el ancho disponible como bloque */
+    display: block;
+
+    /* Redondea las esquinas externas del componente */
+    border-radius: 20px;
+
+    /* Oculta cualquier contenido que sobresalga de los bordes */
+    overflow: hidden;
+}
+
+/* Personaliza la imagen principal mostrada dentro de la tarjeta */
+.custom-card-img {
+
+    /* Hace que la imagen ocupe todo el ancho disponible */
+    width: 100%;
+
+    /* Define una altura fija para mantener uniformidad entre tarjetas */
+    height: 250px;
+
+    /* Recorta la imagen proporcionalmente sin deformarla */
+    object-fit: cover;
+
+    /* Evita comportamientos extraños de alineación convirtiéndola en bloque */
+    display: block;
+}

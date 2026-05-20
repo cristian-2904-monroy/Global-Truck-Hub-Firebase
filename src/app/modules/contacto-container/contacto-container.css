@@ -1,0 +1,13 @@
+/* Controla el tamaño máximo permitido para el logo de contacto */
+.logo-contacto{
+
+    /* Evita que la imagen del logo se vea demasiado grande en pantallas amplias */
+    max-width: 280px;
+}
+
+/* Configura el ancho máximo del contenedor donde se muestra el mapa */
+.mapa-wrapper{
+
+    /* Limita el tamaño horizontal del mapa para mantener una mejor distribución visual */
+    max-width: 1200px;
+}

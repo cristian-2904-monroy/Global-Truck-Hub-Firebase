@@ -1,0 +1,29 @@
+/* Personaliza el comportamiento visual de los enlaces del menú */
+.custom-nav-link{
+
+    /* Suaviza los cambios visuales cuando el usuario interactúa con el botón */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilos aplicados al pasar el cursor sobre el enlace */
+.custom-nav-link:hover{
+
+    /* Agrega un fondo semitransparente para resaltar el botón */
+    background-color: rgba(255, 255, 255, 0.15);
+
+    /* Mueve ligeramente el botón hacia arriba para crear un efecto dinámico */
+    transform: translateY(-2px);
+}
+
+/* Apariencia utilizada cuando el botón corresponde a la página activa */
+.custom-nav-link.active{
+
+    /* Cambia el fondo para indicar visualmente la sección seleccionada */
+    background-color: rgba(255, 255, 255, 0.2);
+
+    /* Modifica el color del texto para diferenciar el enlace activo */
+    color: #460101 !important;
+
+    /* Agrega una sombra suave debajo del botón para darle profundidad */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

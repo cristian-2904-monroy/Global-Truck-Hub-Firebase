@@ -1,0 +1,46 @@
+/* Diseña el contenedor visual de cada botón de red social */
+.social-button {
+
+    /* Define un ancho fijo para mantener todos los botones uniformes */
+    width: 45px;
+
+    /* Establece la altura del botón para formar una figura equilibrada */
+    height: 45px;
+
+    /* Aplica un fondo oscuro que combine con el diseño general del sitio */
+    background-color: #1a1a1a;
+
+    /* Redondea completamente las esquinas para crear una forma circular */
+    border-radius: 50%;
+
+    /* Activa flexbox para centrar el contenido interno fácilmente */
+    display: flex;
+
+    /* Centra verticalmente el ícono dentro del botón */
+    align-items: center;
+
+    /* Centra horizontalmente el contenido */
+    justify-content: center;
+
+    /* Cambia el color del ícono a blanco para mejorar el contraste */
+    color: white;
+
+    /* Elimina el subrayado predeterminado de los enlaces */
+    text-decoration: none;
+
+    /* Suaviza los efectos visuales cuando el usuario interactúa con el botón */
+    transition: all 0.3s ease;
+
+    /* Ajusta el tamaño visual del ícono mostrado */
+    font-size: 1.2rem;
+}
+
+/* Efectos aplicados cuando el cursor pasa sobre el botón */
+.social-button:hover {
+
+    /* Cambia el fondo a rojo para resaltar la interacción */
+    background-color: #b30000;
+
+    /* Eleva ligeramente el botón para generar sensación de movimiento */
+    transform: translateY(-3px);
+}

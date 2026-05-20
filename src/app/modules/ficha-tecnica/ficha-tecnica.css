@@ -1,0 +1,7 @@
+.ficha-container{
+    /* Fondo muy suave para dar efecto de transparencia */
+    background-color: rgba(255,255,255,0.02);
+
+    /* Borde oscuro sutil para delimitar el contenedor */
+    border: 1px solid #333;
+}
