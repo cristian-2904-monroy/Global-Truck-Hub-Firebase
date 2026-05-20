@@ -27,6 +27,7 @@ export class ComponenteCotizacion implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    window.scrollTo(0, 0); //lleva la página hacia arriba
     console.log('Cotización iniciada');
     // Cambiamos 'nombre' por 'id' para que coincida con la ruta
     const id = this.route.snapshot.paramMap.get('id');
