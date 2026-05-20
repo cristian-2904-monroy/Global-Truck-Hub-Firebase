@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { CamionesService } from '../../services/camiones.service';
@@ -24,10 +24,11 @@ export class ComponenteCotizacion implements OnInit {
     private route: ActivatedRoute,
     private camionesService: CamionesService,
     private cdr: ChangeDetectorRef,
+    private viewportScroller: ViewportScroller
   ) {}
 
   ngOnInit(): void {
-    window.scrollTo(0, 0); //lleva la página hacia arriba
+    this.viewportScroller.scrollToPosition([0, 0]);  //fuerza scroll hacia arriba
     console.log('Cotización iniciada');
     // Cambiamos 'nombre' por 'id' para que coincida con la ruta
     const id = this.route.snapshot.paramMap.get('id');
