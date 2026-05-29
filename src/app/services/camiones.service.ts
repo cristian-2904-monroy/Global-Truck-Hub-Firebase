@@ -31,5 +31,7 @@ export class CamionesService {
     const ref = doc(this.firestore, `camiones/${id}`);
     //docData obtiene los datos del documento como Observable
     return docData(ref, { idField: 'id' }) as Observable<any>;
+    //se usa Observable porque firestore sincroniza datos eb tiempo real. si se modifican en la base de datos
+    //el Observable mostrara automaticamente el nuevo valor
   }
 }
