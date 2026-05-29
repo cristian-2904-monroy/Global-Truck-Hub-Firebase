@@ -1,43 +1,41 @@
-
+<!-- Barra de navegación principal -->
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow">
 
-  
+  <!-- Contenedor que ocupa todo el ancho disponible -->
   <div class="container-fluid">
 
-    
+    <!-- Componente personalizado que muestra el logo -->
     <app-logo></app-logo>
 
-    
+    <!-- Botón hamburgesa que sale en pantallas pequeñas para desplegar el menú -->
     <button 
       class="navbar-toggler" 
-      type="button" 
+      type="button"
 
-      
-      data-bs-toggle="collapse" 
+      data-bs-toggle="collapse"
 
-      
       data-bs-target="#menuPrincipal">
 
-      
+      <!-- Ícono de hamburguesa del botón -->
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    
+    <!-- Contenedor del menú que se colapsa en dispositivos pequeños -->
     <div class="collapse navbar-collapse" id="menuPrincipal">
 
-      
+      <!-- Contenedor de los enlaces de navegación -->
       <div class="navbar-nav ms-auto align-items-center">
 
-        
+        <!-- Botón de navegación hacia la página de inicio -->
         <app-nav-button link="/home" texto="INICIO"></app-nav-button>
 
-        
+        <!-- Botón de navegación hacia el catálogo -->
         <app-nav-button link="/catalogo" texto="CATÁLOGO"></app-nav-button>
 
-        
+        <!-- Botón de navegación hacia la sección de cotización -->
         <app-nav-button link="/cotizacion" texto="COTIZACIÓN"></app-nav-button>
 
-        
+        <!-- Botón de navegación hacia la página de contacto -->
         <app-nav-button link="/contacto" texto="CONTACTO"></app-nav-button>
 
       </div>
