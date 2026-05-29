@@ -1,19 +1,16 @@
-
+<!-- Contenedor que organiza los íconos de redes sociales en una fila -->
 <div class="d-flex justify-content-center gap-3 py-3">
 
-  
+  <!-- Recorre la lista 'redes' y genera un elemento por cada red social -->
+  <!-- track red.nombre ayuda a Angular a identificar cada elemento de forma única -->
   @for (red of redes; track red.nombre) {
 
-    
+    <!-- Enlace que dirige a la URL de la red social correspondiente -->
     <a [href]="red.url" class="social-button">
 
-      
+      <!-- Ícono de la red social -->
       <i 
-        
-        
-        [class]="red.icono" 
-
-        
+        [class]="red.icono"
         [style.color]="red.color"></i>
     </a>
   }
