@@ -1,47 +1,104 @@
+<!-- Contenedor principal del catálogo -->
 <main class="container my-5">
+
   <!-- Indicador de carga -->
+  <!-- Se muestra únicamente cuando la variable cargando es true -->
   <div *ngIf="cargando" class="text-center text-white my-5">
+
     <div class="spinner-border text-danger" role="status">
+
+      <!-- Texto oculto para accesibilidad -->
       <span class="visually-hidden">Cargando camiones...</span>
     </div>
+
+    <!-- Mensaje visible mientras se cargan los datos -->
     <p class="mt-2">Cargando catálogo...</p>
   </div>
 
-  <!-- Contenido principal: solo cuando NO está cargando -->
+  <!-- Contenido principal -->
+  <!-- Solo se muestra cuando cargando es false -->
   <div *ngIf="!cargando">
-    <!-- Mensaje si no hay datos -->
+
+    <!-- Mensaje que aparece cuando no existen camiones en el catálogo -->
     <div *ngIf="catalogo.length === 0" class="text-center text-white my-5">
       No se encontraron camiones.
     </div>
 
-    <!-- Si hay datos, mostrar el catálogo -->
+    <!-- Sección que se muestra cuando existen camiones en el catálogo -->
     <div *ngIf="catalogo.length > 0">
+
+      <!-- Encabezado principal de la página -->
       <header class="row mb-5">
+
+        <!-- Columna que ocupa todo el ancho -->
         <div class="col-12 text-center">
+
+          <!-- Título del catálogo -->
           <h2 class="text-danger fw-bold display-4">CATÁLOGO DE CAMIONES</h2>
         </div>
       </header>
 
+      <!-- Recorre cada categoría almacenada en el catálogo -->
       <section class="mb-5" *ngFor="let categoria of catalogo">
+
+        <!-- Fila para organizar las tarjetas -->
         <div class="row">
+
+          <!-- Recorre cada camión dentro de la categoría actual -->
           <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let camion of categoria.listado">
+
+            <!-- Tarjeta que contiene la información del camión -->
             <div class="card h-100 bg-dark text-white border-danger shadow-lg">
+
+              <!-- Imagen del camión -->
               <img
                 [src]="camion.imagen"
+
                 class="card-img-top"
+
                 [alt]="camion.nombre"
+
                 style="height: 220px; object-fit: cover"
               />
+
+              <!-- Cuerpo de la tarjeta -->
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title fw-bold text-danger">{{ camion.nombre }}</h5>
-                <p class="card-text mb-2"><strong>Marca:</strong> {{ camion.marca }}</p>
-                <p class="card-text mb-2"><strong>Motor:</strong> {{ camion.motor }}</p>
-                <p class="card-text mb-3"><strong>Potencia:</strong> {{ camion.potencia }}</p>
+
+                <!-- Nombre del camión -->
+                <h5 class="card-title fw-bold text-danger">
+                  {{ camion.nombre }}
+                </h5>
+
+                <!-- Marca del camión -->
+                <p class="card-text mb-2">
+                  <strong>Marca:</strong> {{ camion.marca }}
+                </p>
+
+                <!-- Información del motor -->
+                <p class="card-text mb-2">
+                  <strong>Motor:</strong> {{ camion.motor }}
+                </p>
+
+                <!-- Potencia del camión -->
+                <p class="card-text mb-3">
+                  <strong>Potencia:</strong> {{ camion.potencia }}
+                </p>
+
+                <!-- Contenedor inferior que se mantiene al final de la tarjeta -->
                 <div class="mt-auto">
+
+                  <!-- Precio formateado en moneda colombiana -->
                   <h4 class="fw-bold text-white mb-3">
                     {{ camion.precio | currency: 'COP' : 'symbol' : '1.0-0' }}
                   </h4>
-                  <a class="btn btn-danger w-100 fw-bold" [routerLink]="['/cotizacion', camion.id]">
+
+                  <!-- Botón para ir a la página de cotización del camión -->
+                  <a
+                    class="btn btn-danger w-100 fw-bold"
+
+                    <!-- Navega a la ruta /cotizacion/idDelCamion -->
+                    [routerLink]="['/cotizacion', camion.id]">
+
                     Cotizar Camión
                   </a>
                 </div>
