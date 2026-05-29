@@ -1,63 +1,100 @@
+<!-- Contenedor principal de la ficha técnica -->
 <div class="ficha-container table-responsive p-4 shadow-lg">
+
+  <!-- Tabla que muestra las especificaciones técnicas del camión -->
   <table class="table table-dark table-hover mb-0">
+
+    <!-- Encabezado de la tabla -->
     <thead>
+
       <tr>
+
+        <!-- Título que ocupa las dos columnas de la tabla -->
         <th
           colspan="2"
           class="text-danger text-uppercase py-3 border-bottom border-danger">
+
+          <!-- Muestra el nombre del camión seleccionado -->
           Especificaciones Técnicas - {{ camion()?.nombre }}
+
         </th>
       </tr>
+
     </thead>
 
+    <!-- Cuerpo de la tabla -->
     <tbody>
+
+      <!-- Fila para mostrar la marca -->
       <tr>
         <td class="fw-bold text-secondary">Marca</td>
         <td>{{ camion()?.marca }}</td>
       </tr>
 
+      <!-- Fila para mostrar el motor -->
       <tr>
         <td class="fw-bold text-secondary">Motor</td>
         <td>{{ camion()?.motor }}</td>
       </tr>
 
+      <!-- Fila para mostrar la transmisión -->
       <tr>
         <td class="fw-bold text-secondary">Transmisión</td>
         <td>{{ camion()?.transmision }}</td>
       </tr>
 
+      <!-- Fila para mostrar la potencia -->
       <tr>
         <td class="fw-bold text-secondary">Potencia</td>
         <td>{{ camion()?.potencia }}</td>
       </tr>
 
+      <!-- Fila para mostrar el torque -->
       <tr>
         <td class="fw-bold text-secondary">Torque</td>
         <td>{{ camion()?.torque }}</td>
       </tr>
 
+      <!-- Fila para mostrar el número de ejes -->
       <tr>
         <td class="fw-bold text-secondary">Ejes</td>
         <td>{{ camion()?.ejes }}</td>
       </tr>
 
+      <!-- Fila para mostrar el precio -->
       <tr>
         <td class="fw-bold text-secondary">Precio</td>
-        <td>{{ camion()?.precio | currency:'COP':'symbol':'1.0-0' }}</td>
+
+        <!-- El precio se formatea en pesos colombianos -->
+        <td>
+          {{ camion()?.precio | currency:'COP':'symbol':'1.0-0' }}
+        </td>
       </tr>
+
     </tbody>
   </table>
 </div>
 
+<!-- Título adicional de la ficha técnica -->
 <h2 class="text-uppercase mt-4">
+
+  <!-- Muestra nuevamente el nombre del camión -->
   Ficha Técnica: {{ camion()?.nombre }}
+
 </h2>
 
+<!-- Contenedor del botón de impresión -->
 <div class="mt-4 d-print-none text-center">
+
   <button
+
     type="button"
+
     (click)="imprimirCotizacion()"
+
     class="btn btn-danger btn-lg rounded-pill shadow">
+
     Imprimir o Guardar como PDF
+
   </button>
 </div>
