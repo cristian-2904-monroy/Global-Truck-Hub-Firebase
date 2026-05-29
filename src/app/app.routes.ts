@@ -1,17 +1,12 @@
 import { Routes } from '@angular/router';
-// Importa el tipo Routes para definir la configuración de navegación en Angular
 
 import { HomeContainer } from './modules/home-container/home-container';
-// Importa el componente de la página principal (Home)
 
 import { ComponenteCatalogo } from './modules/componente-catalogo/componente-catalogo';
-// Importa el componente del catálogo de productos
 
 import { ComponenteCotizacion } from './modules/componente-cotizacion/componente-cotizacion';
-// Importa el componente de cotización
 
 import { ContactoContainer } from './modules/contacto-container/contacto-container';
-// Importa el componente de contacto
 
 export const routes: Routes = [
 
