@@ -1,68 +1,76 @@
-
+<!-- Formulario de contacto -->
 <form class="form-contacto p-4 rounded-3 shadow">
 
-  
+  <!-- Campo para ingresar el nombre completo -->
   <div class="mb-3">
 
-    
     <input
       type="text"
+
       class="form-control custom-input"
+
       placeholder="Nombre Completo">
 
   </div>
 
-  
+  <!-- Campo para ingresar la dirección -->
   <div class="mb-3">
 
-    
     <input
       type="text"
+
       class="form-control custom-input"
+
       placeholder="Dirección">
 
   </div>
 
-  
+  <!-- Campo para ingresar el correo electrónico -->
   <div class="mb-3">
 
-    
     <input
       type="email"
+
       class="form-control custom-input"
+
       placeholder="Correo Electrónico">
 
   </div>
 
-  
+  <!-- Campo para ingresar el número telefónico -->
   <div class="mb-3">
 
-    
     <input
       type="tel"
+
       class="form-control custom-input"
+
       placeholder="Número de Teléfono">
 
   </div>
 
-  
+  <!-- Campo para escribir el mensaje -->
   <div class="mb-4">
 
-    
     <textarea
+
       class="form-control custom-input"
+
       rows="4"
+
       placeholder="Escribe tu mensaje aquí..."></textarea>
 
   </div>
 
-  
+  <!-- Contenedor del botón de envío -->
   <div class="col-12 mt-3">
 
-    
     <button
+
       type="button"
+
       (click)="enviarFormulario()"
+
       class="btn btn-enviar-contacto w-100 fw-bold">
 
       ENVIAR MENSAJE
